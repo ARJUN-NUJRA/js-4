@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Write a code to replace the value 6 in the following object with 606</h1>
+    <script>
+        let obj = {
+  foo: { a: "hello", b: "world" },
+  bar: ["example", "mem", null, { xyz: 6 }, 88],
+  qux: [4, 8, 12]
+};
+document.write("old","<br>",JSON.stringify(obj),"<br>")
+Object.seal(obj);
+obj.bar[3].xyz = 606;
+document.write("new","<br>",JSON.stringify(obj));
+    </script>
+</body>
+</html>
